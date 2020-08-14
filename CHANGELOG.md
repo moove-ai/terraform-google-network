@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.5.0](https://www.github.com/terraform-google-modules/terraform-google-network/compare/v2.4.0...v2.5.0) (2020-08-11)
+
+
+### Features
+
+* Allow passing target_tags to configure the default firewall rules ([#191](https://www.github.com/terraform-google-modules/terraform-google-network/issues/191)) ([996b4f1](https://www.github.com/terraform-google-modules/terraform-google-network/commit/996b4f179e4ac2751e1690a43b41e687759dff8d))
+
+
+### Bug Fixes
+
+* Add support for 3.x provider to beta subnets module ([#194](https://www.github.com/terraform-google-modules/terraform-google-network/issues/194)) ([4957536](https://www.github.com/terraform-google-modules/terraform-google-network/commit/49575366d3a57ded474f0417e14eb13875eda304))
+* Relax Terraform version to allow 0.13  ([#197](https://www.github.com/terraform-google-modules/terraform-google-network/issues/197)) ([1a77919](https://www.github.com/terraform-google-modules/terraform-google-network/commit/1a77919fadd46c658adb9e94da0b121b4b924aaf))
+
+## [2.4.0](https://www.github.com/terraform-google-modules/terraform-google-network/compare/v2.3.0...v2.4.0) (2020-06-01)
+
+
+### Features
+
+* Switch default route deletion to use native method. ([#185](https://www.github.com/terraform-google-modules/terraform-google-network/issues/185)) ([c1d786f](https://www.github.com/terraform-google-modules/terraform-google-network/commit/c1d786fe0743d205911d7c592b8f7c406ad45be2))
+  - Route deletion has now been moved to the VPC module. Hence, you must *remove* calls to `delete_default_internet_gateway_routes` from
+  any usage of the routes submodule
+
+
+### Bug Fixes
+
+* Remove quoted references ([#183](https://www.github.com/terraform-google-modules/terraform-google-network/issues/183)) ([7e5f5ab](https://www.github.com/terraform-google-modules/terraform-google-network/commit/7e5f5ab9fa4f19b4995ae24c9db1234dbdbcb487))
+* Resolve Invalid index error on shared vpc destroy ([#177](https://www.github.com/terraform-google-modules/terraform-google-network/issues/177)) ([b799266](https://www.github.com/terraform-google-modules/terraform-google-network/commit/b799266146daffa3ba75f3fb5c7920c5f1df165c))
+
 ## [2.3.0](https://www.github.com/terraform-google-modules/terraform-google-network/compare/v2.2.0...v2.3.0) (2020-04-16)
 
 

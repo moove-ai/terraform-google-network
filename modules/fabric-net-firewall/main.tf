@@ -25,6 +25,7 @@ resource "google_compute_firewall" "allow-internal" {
   network       = var.network
   project       = var.project_id
   source_ranges = var.internal_ranges
+  target_tags   = var.internal_target_tags
 
   dynamic "allow" {
     for_each = [for rule in var.internal_allow :
@@ -38,7 +39,6 @@ resource "google_compute_firewall" "allow-internal" {
       ports    = allow.value.ports
     }
   }
-
 }
 
 resource "google_compute_firewall" "allow-admins" {

@@ -32,6 +32,11 @@ variable "internal_ranges" {
   default     = []
 }
 
+variable "internal_target_tags" {
+  description = "List of target tags for intra-VPC rules."
+  default     = []
+}
+
 variable "internal_allow" {
   description = "Allow rules for internal ranges."
   default = [
